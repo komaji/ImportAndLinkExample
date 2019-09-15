@@ -17,7 +17,6 @@
 		2B978EB2232BEF6B00F541E5 /* Dog.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B978EAA232BEF6B00F541E5 /* Dog.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B978EB7232BEFDE00F541E5 /* DogClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B978EB6232BEFDE00F541E5 /* DogClass.swift */; };
 		2B978ED7232E242C00F541E5 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B978ED6232E242C00F541E5 /* Cat.swift */; };
-		2B978EDC232E253000F541E5 /* libCat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B978ED4232E242C00F541E5 /* libCat.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +73,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B978EDC232E253000F541E5 /* libCat.a in Frameworks */,
 				2B978EB1232BEF6B00F541E5 /* Dog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +466,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
+				OTHER_LDFLAGS = "-lCat";
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = io.komaji.ImportAndLinkExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -486,6 +487,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
+				OTHER_LDFLAGS = "-lCat";
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = io.komaji.ImportAndLinkExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
