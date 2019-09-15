@@ -16,6 +16,7 @@
 		2B978EB1232BEF6B00F541E5 /* Dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B978EAA232BEF6B00F541E5 /* Dog.framework */; };
 		2B978EB2232BEF6B00F541E5 /* Dog.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B978EAA232BEF6B00F541E5 /* Dog.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B978EB7232BEFDE00F541E5 /* DogClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B978EB6232BEFDE00F541E5 /* DogClass.swift */; };
+		2B978ED7232E242C00F541E5 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B978ED6232E242C00F541E5 /* Cat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,15 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2B978ED2232E242C00F541E5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +64,8 @@
 		2B978EAC232BEF6B00F541E5 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		2B978EAD232BEF6B00F541E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B978EB6232BEFDE00F541E5 /* DogClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogClass.swift; sourceTree = "<group>"; };
+		2B978ED4232E242C00F541E5 /* libCat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCat.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B978ED6232E242C00F541E5 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +84,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2B978ED1232E242C00F541E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +99,7 @@
 			children = (
 				2B978E5C232BE8DC00F541E5 /* ImportAndLinkExample */,
 				2B978EAB232BEF6B00F541E5 /* Dog */,
+				2B978ED5232E242C00F541E5 /* Cat */,
 				2B978E5B232BE8DB00F541E5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +109,7 @@
 			children = (
 				2B978E5A232BE8DB00F541E5 /* ImportAndLinkExample.app */,
 				2B978EAA232BEF6B00F541E5 /* Dog.framework */,
+				2B978ED4232E242C00F541E5 /* libCat.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,6 +135,14 @@
 				2B978EB6232BEFDE00F541E5 /* DogClass.swift */,
 			);
 			path = Dog;
+			sourceTree = "<group>";
+		};
+		2B978ED5232E242C00F541E5 /* Cat */ = {
+			isa = PBXGroup;
+			children = (
+				2B978ED6232E242C00F541E5 /* Cat.swift */,
+			);
+			path = Cat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +196,23 @@
 			productReference = 2B978EAA232BEF6B00F541E5 /* Dog.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		2B978ED3232E242C00F541E5 /* Cat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B978EDA232E242C00F541E5 /* Build configuration list for PBXNativeTarget "Cat" */;
+			buildPhases = (
+				2B978ED0232E242C00F541E5 /* Sources */,
+				2B978ED1232E242C00F541E5 /* Frameworks */,
+				2B978ED2232E242C00F541E5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cat;
+			productName = Cat;
+			productReference = 2B978ED4232E242C00F541E5 /* libCat.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -183,6 +229,9 @@
 					2B978EA9232BEF6B00F541E5 = {
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1020;
+					};
+					2B978ED3232E242C00F541E5 = {
+						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
@@ -201,6 +250,7 @@
 			targets = (
 				2B978E59232BE8DB00F541E5 /* ImportAndLinkExample */,
 				2B978EA9232BEF6B00F541E5 /* Dog */,
+				2B978ED3232E242C00F541E5 /* Cat */,
 			);
 		};
 /* End PBXProject section */
@@ -240,6 +290,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B978EB7232BEFDE00F541E5 /* DogClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B978ED0232E242C00F541E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B978ED7232E242C00F541E5 /* Cat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +540,30 @@
 			};
 			name = Release;
 		};
+		2B978ED8232E242C00F541E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B978ED9232E242C00F541E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -508,6 +590,15 @@
 			buildConfigurations = (
 				2B978EB3232BEF6B00F541E5 /* Debug */,
 				2B978EB4232BEF6B00F541E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B978EDA232E242C00F541E5 /* Build configuration list for PBXNativeTarget "Cat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B978ED8232E242C00F541E5 /* Debug */,
+				2B978ED9232E242C00F541E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
