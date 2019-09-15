@@ -17,6 +17,7 @@
 		2B978EB2232BEF6B00F541E5 /* Dog.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B978EAA232BEF6B00F541E5 /* Dog.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B978EB7232BEFDE00F541E5 /* DogClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B978EB6232BEFDE00F541E5 /* DogClass.swift */; };
 		2B978ED7232E242C00F541E5 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B978ED6232E242C00F541E5 /* Cat.swift */; };
+		2B978EDC232E253000F541E5 /* libCat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B978ED4232E242C00F541E5 /* libCat.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B978EDC232E253000F541E5 /* libCat.a in Frameworks */,
 				2B978EB1232BEF6B00F541E5 /* Dog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +103,7 @@
 				2B978EAB232BEF6B00F541E5 /* Dog */,
 				2B978ED5232E242C00F541E5 /* Cat */,
 				2B978E5B232BE8DB00F541E5 /* Products */,
+				2B978EDB232E253000F541E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +146,13 @@
 				2B978ED6232E242C00F541E5 /* Cat.swift */,
 			);
 			path = Cat;
+			sourceTree = "<group>";
+		};
+		2B978EDB232E253000F541E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

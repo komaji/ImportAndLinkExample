@@ -8,6 +8,7 @@
 
 import UIKit
 import Dog
+import Cat
 
 class ViewController: UIViewController {
 
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         DogClass().say()
+        CatClass().say()
     }
 
 
