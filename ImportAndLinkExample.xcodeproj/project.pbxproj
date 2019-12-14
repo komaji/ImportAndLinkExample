@@ -13,7 +13,6 @@
 		2B978E65232BE8DD00F541E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B978E64232BE8DD00F541E5 /* Assets.xcassets */; };
 		2B978E68232BE8DD00F541E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B978E66232BE8DD00F541E5 /* LaunchScreen.storyboard */; };
 		2B978EAE232BEF6B00F541E5 /* Dog.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B978EAC232BEF6B00F541E5 /* Dog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B978EB1232BEF6B00F541E5 /* Dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B978EAA232BEF6B00F541E5 /* Dog.framework */; };
 		2B978EB2232BEF6B00F541E5 /* Dog.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B978EAA232BEF6B00F541E5 /* Dog.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B978EB7232BEFDE00F541E5 /* DogClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B978EB6232BEFDE00F541E5 /* DogClass.swift */; };
 		2B978ED7232E242C00F541E5 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B978ED6232E242C00F541E5 /* Cat.swift */; };
@@ -73,7 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B978EB1232BEF6B00F541E5 /* Dog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +467,7 @@
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
 				OTHER_LDFLAGS = "-lCat";
 				OTHER_LIBTOOLFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-Xfrontend -disable-autolink-framework -Xfrontend Dog";
 				PRODUCT_BUNDLE_IDENTIFIER = io.komaji.ImportAndLinkExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -490,6 +489,7 @@
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
 				OTHER_LDFLAGS = "-lCat";
 				OTHER_LIBTOOLFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-Xfrontend -disable-autolink-framework -Xfrontend Dog";
 				PRODUCT_BUNDLE_IDENTIFIER = io.komaji.ImportAndLinkExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -515,6 +515,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = io.komaji.Dog;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -544,6 +545,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = io.komaji.Dog;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
